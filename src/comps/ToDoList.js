@@ -19,7 +19,7 @@ export default class ToDoList extends Component {
 
 		const thirdTask = "Bring it back";
 		return (
-			<View style={styles.container}>
+			<View style={{flex: 1, backgroundColor: 'white'}}>
 	        <Text style={styles.header}>
 	          To Do List
 	        </Text>
