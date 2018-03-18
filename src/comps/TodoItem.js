@@ -8,11 +8,8 @@ import {
 
 export default class TodoItem extends Component {
 	
-	constructor(props) {
-		super(props)
-		this.state = {
-			completed: props.title == '1. Go to the store'
-		}
+	state = {
+		completed: false
 	}
 
 	toggleTodo = () => {
