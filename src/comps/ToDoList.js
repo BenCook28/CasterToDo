@@ -19,7 +19,7 @@ export default class ToDoList extends Component {
 
 		const thirdTask = "Bring it back";
 		return (
-			<View style={{flex: 1, backgroundColor: 'white'}}>
+			<View style={styles.content}>
 	        <Text style={styles.header}>
 	          To Do List
 	        </Text>
@@ -39,15 +39,21 @@ export default class ToDoList extends Component {
 
 const styles = StyleSheet.create({
 	container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+	    flex: 1,
+	    justifyContent: 'center',
+	    alignItems: 'center',
+	    backgroundColor: '#F5FCFF',
 	},
 	header: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+		padding: 10,
+		paddingTop: 20,
+		alignSelf: 'stretch',
+		backgroundColor: '#2288ee',
+		borderBottomWidth: 1,
+		borderColor: '#0066cc',
+	    fontSize: 20,
+	    textAlign: 'center',
+	    color: '#ffffff'
     },
 	content: {
 		flex: 1,
