@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
 	StyleSheet,
 	Text,
-	View
+	View,
+	ScrollView
 } from 'react-native';
 
 import TodoItem from './TodoItem';
@@ -22,13 +23,13 @@ export default class ToDoList extends Component {
 	        <Text style={styles.header}>
 	          To Do List
 	        </Text>
-	        <View style={styles.content}>
+	        <ScrollView style={styles.content}>
 	        	{
 	        		items.map((item, index) => {
 	        			return <TodoItem title={item} key={index}/>
 	        		})
 	        	}
-	        </View>
+	        </ScrollView>
 	      </View>	
 		)
 	}
@@ -47,7 +48,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
     },
-	item: {
-	    padding: 10
+	content: {
+		flex: 1,
+		alignSelf: 'stretch'
 	}
 })
