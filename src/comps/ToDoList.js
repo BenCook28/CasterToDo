@@ -3,7 +3,8 @@ import {
 	StyleSheet,
 	Text,
 	View,
-	FlatList
+	FlatList,
+	StatusBar
 } from 'react-native';
 
 import TodoItem from './TodoItem';
@@ -19,10 +20,13 @@ export default class ToDoList extends Component {
 
 		const thirdTask = "Bring it back";
 		return (
-			<View style={styles.content}>
-	        <Text style={styles.header}>
-	          To Do List
-	        </Text>
+			<View style={styles.container}>
+				<StatusBar barStyle="light-content" />
+				<View style={styles.header}>
+		        	<Text style={styles.header}>
+			          To Do List
+			        </Text>
+			    </View>
 	        <FlatList
 	        	data={items}
 	        	style={styles.content}
@@ -40,9 +44,7 @@ export default class ToDoList extends Component {
 const styles = StyleSheet.create({
 	container: {
 	    flex: 1,
-	    justifyContent: 'center',
-	    alignItems: 'center',
-	    backgroundColor: '#F5FCFF',
+	    backgroundColor: '#fff',
 	},
 	header: {
 		padding: 10,
